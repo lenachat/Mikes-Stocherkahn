@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   ScrollTrigger.create({
     trigger: "#wir",
-    start: "top 10%",
+    start: "top top",
     end: () => `+=${scrollAmount}`,
     pin: true,
     scrub: 1,
@@ -59,13 +59,67 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       ScrollTrigger.create({
         trigger: headline,
-        start: "top 80%", // Start the animation when the text enters the view
-        end: "top 50%", // End the animation when the text reaches 50% of the screen
+        start: "top 70%", // Start the animation when the text enters the view
+        end: "top 30%", // End the animation when the text reaches 50% of the screen
         animation: animation,
-        scrub: true, // Scrubbing smoothens the effect with scroll
+        scrub: 1, // Scrubbing smoothens the effect with scroll
         markers: false, // Optional: Remove markers for debugging
       });
     });
+  });
+
+  // About Section Animation
+  ScrollTrigger.create({
+    trigger: ".text-container",
+    start: "top 30%",
+    end: () => "+=" + document.querySelector(".text-container").scrollHeight,
+    pin: true,
+    scrub: true,
+    markers: false,
+    invalidateOnRefresh: true,
+  });
+
+  gsap.to(".kahn-topview", {
+    y: "-50%",
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    }
+  });
+
+  gsap.to(".text-section-1", {
+    autoAlpha: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".text-section-1",
+      start: "top 50%",
+      end: () => `+=${document.querySelector('.text-section-1').offsetHeight}`,
+      markers: true,
+    }
+  });
+
+  gsap.to(".text-section-2", {
+    autoAlpha: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".text-section-2",
+      start: "top 50%",
+      end: () => `+=${document.querySelector('.text-section-2').offsetHeight}`,
+      markers: true,
+    }
+  });
+
+  gsap.to(".text-section-3", {
+    autoAlpha: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".text-section-3",
+      start: "top 50%",
+      end: () => `+=${document.querySelector('.text-section-3').offsetHeight}`,
+      markers: true,
+    }
   });
 
 });

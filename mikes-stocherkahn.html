@@ -11,7 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Dela+Gothic+One&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
 </head>
 
 <body>
@@ -27,16 +26,48 @@
         <button><a href="#fahrten">Book now</a></button>
     </div>
 
-    <div id="about">
+    <div id="about"     >
         <h3>So geht's</h3>
-        <p>
-            Eine Rundfahrt um die Neckarinsel (ca. 2000 Meter Strecke) mit faszinierenden Geschichten, lustigen
-            Anekdoten und humorvollen Gogenwitzen. <br>
-            Entspannung und Spaß auf einem traditionellen hölzernen Stocherkahn. <br>
-            Gut-Wetter-Garantie: Sollte es in der halben Stunde vor der Stocherkahnfahrt regnen, können Sie die Fahrt
-            verschieben oder kostenlos stornieren. <br>
-            Selbst mitgebrachte Getränke und Speisen sind herzlich willkommen!
-        </p>
+        <div class="about">
+            <div class="image-container">
+                <img class="kahn-topview" src="images/kahn-topview.jpg" alt="">
+            </div>
+            <div class="text-container">
+                <p class="text-section-1">
+                    Eine Rundfahrt um die Neckarinsel (ca. 2000 Meter Strecke) mit faszinierenden Geschichten, lustigen
+                    Anekdoten und humorvollen Gogenwitzen.
+                </p>
+                <p class="text-section-2">
+                    Entspannung und Spaß auf einem traditionellen hölzernen Stocherkahn.
+                </p>
+                <p class="text-section-3">
+                    Gut-Wetter-Garantie: Sollte es in der halben Stunde vor der Stocherkahnfahrt regnen, können Sie die
+                    Fahrt verschieben oder kostenlos stornieren.
+                </p>
+            </div>
+
+
+            <!-- <div>
+                <img class="kahn-topview" src="images/kahn-topview.jpg" alt="">
+            </div>
+            <div>
+                <p>
+                    Eine Rundfahrt um die Neckarinsel (ca. 2000 Meter Strecke) mit faszinierenden Geschichten, lustigen
+                    Anekdoten und humorvollen Gogenwitzen.
+                </p>
+                <p>
+                    Entspannung und Spaß auf einem traditionellen hölzernen Stocherkahn.
+                </p>
+                <p>
+                    Gut-Wetter-Garantie: Sollte es in der halben Stunde vor der Stocherkahnfahrt regnen, können Sie die
+                    Fahrt
+                    verschieben oder kostenlos stornieren.
+                </p>
+                <p>
+                    Selbst mitgebrachte Speisen und Getränke sind herzlich willkommen!
+                </p>
+            </div> -->
+        </div>
     </div>
 
     <div id="fahrten">
@@ -81,7 +112,7 @@
         </div>
     </div>
 
-    <div id="info">
+    <div id="info" class="default-card">
         <h3>Gut zu wissen</h3>
         <p>
             Längere Fahrten sind nach Absprache möglich. Bei länger gebuchter Fahrdauer wird der Neckar zusätzlich
@@ -108,7 +139,7 @@
         </div>
     </div>
 
-    <div id="wir">
+    <div id="wir" class="default-card">
         <h3>Das sind wir</h3>
         <div class="foto-gallery">
             <div class="card-wrapper">
@@ -149,7 +180,7 @@
         </div>
     </div>
 
-    <div id="kontakt">
+    <div id="kontakt" class="default-card">
         <h3>Kontakt</h3>
         <form>
             <div class="grid-container-form">
@@ -164,7 +195,7 @@
         </form>
     </div>
 
-    <footer>
+    <footer class="default-card">
         <h4>Impressum</h4>
         <p>
             Michael Wiehl <br>
@@ -177,10 +208,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
 </body>
 

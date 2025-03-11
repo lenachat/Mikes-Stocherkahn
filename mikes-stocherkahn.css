@@ -1,13 +1,14 @@
 body {
     font-family: 'Outfit', sans-serif;
     font-weight: 200;
-    color: rgb(57, 54, 54);
+    color: #f7f5f4;
     margin: 0;
     padding: 0;
     font-size: 1.3em;
     background: url("/images/stoka.jpg") no-repeat center center fixed;
     background-size: cover;
     position: relative;
+   
 }
 
 body::before {
@@ -17,7 +18,7 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 h1, h2, h3 {
@@ -27,10 +28,22 @@ h1, h2, h3 {
 
 h1 {
     letter-spacing: 0.2em;
+    
 }
 
 h2, h3 {
     letter-spacing: 0.5em;
+    color: #FFCB30;
+}
+
+.default-card {
+    background: rgba(55, 55, 55, 0.8);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    padding: 5em 10em;
+    display: grid;
+    align-items: center;
 }
 
 /*-----------------------------------------------*/
@@ -62,8 +75,7 @@ h2, h3 {
 button {
     padding: 10px 20px;
     border: none;
-    background: darkgoldenrod;
-    color: whitesmoke;
+    background-color: #FFCB30;
     font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -71,27 +83,87 @@ button {
     position: absolute;
     top: 80vh;
     margin-left: 20%;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 button>a {
-    color: whitesmoke;
+    color: rgb(57, 54, 54);
     text-decoration: none;
 }
 
 button:hover {
-    background: rgb(57, 54, 54);
+    background-color: #FFE085;
 }
 
 /*-----------------------------------------------*/
 
-#about {
-    padding: 50px;
-    background: rgba(55, 55, 55, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    color: #f7f5f4;
+.about {
+    display: flex;
+    gap: 40px;
 }
+
+.image-container {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container {
+    width: 50%;
+    max-height: 60vh;
+    overflow-y: auto; 
+}
+
+#about {
+    background: rgba(55, 55, 55, 0.8);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    padding: 5em 10em;
+}
+
+/* .about {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 40px;
+} */
+
+/* .image-container {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+} */
+
+.kahn-topview {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.text-section-1, .text-section-2, .text-section-3 {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* .text-container {
+    align-self: center;
+}  */
+
+/* .text-container {
+    position: absolute;
+    width: 60%;
+    text-align: center;
+} */
+
+/* .text-section {
+    padding-top: 10vh;
+    padding-left: 50px;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+} */
+
 
 /*-----------------------------------------------*/
     /* background: rgba(55, 55, 55, 0.8);
@@ -176,12 +248,6 @@ button:hover {
 /*-----------------------------------------------*/
 
 #info {
-    padding: 50px;
-    background: rgba(55, 55, 55, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    color: #f7f5f4;
 }
 
 .grid-container {
@@ -194,38 +260,30 @@ button:hover {
 /*-----------------------------------------------*/
 
 #wir {
-    margin-top: 30px;
-    padding: 50px;
-    background: rgba(55, 55, 55, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    color: #f7f5f4;    
 }
 
 .foto-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: visible;
+    overflow: visible;
+    align-self: center;
 }
 
 .card-wrapper {
     min-width: 30vw;
     flex: 0 0 30vw;
     overflow: hidden;
-    padding-right: 20px;
+    padding-right: 15px;
+    padding-top: 20vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 .card-wrapper img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 15%;
     margin-bottom: 10px;
 }
 
@@ -237,13 +295,6 @@ button:hover {
 /*-----------------------------------------------*/
 
 #kontakt {
-    margin-top: 30px;
-    padding: 50px;
-    background: rgba(55, 55, 55, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    color: #f7f5f4;
   }
 
 .contact-form {
@@ -291,13 +342,6 @@ input, textarea {
 }
 
 footer {
-    margin-top: 30px;
-    padding: 50px;
-    background: rgba(55, 55, 55, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    color: #f7f5f4;
 } 
 
 footer a {
