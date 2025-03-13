@@ -39,10 +39,10 @@ h2, h3 {
 .default-card {
     background: rgba(55, 55, 55, 0.8);
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
+    /* backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px); */
     padding: 5em 10em;
-    display: grid;
+    /* display: grid; */
     align-items: center;
 }
 
@@ -59,14 +59,14 @@ h2, h3 {
     padding-right: 20%;
 }
 
-.title>h1 {
+.heading {
     color: whitesmoke;
     text-shadow: 3px 3px 3px darkgoldenrod;
-    font-size: 2.8em;
+    font-size: 2.5em;
 }
 
 .sub-title {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: whitesmoke;
     text-shadow: 0;
     position: relative;
@@ -81,7 +81,7 @@ button {
     letter-spacing: 0.1em;
     cursor: pointer;
     position: absolute;
-    top: 80vh;
+    margin-top: 60vh;
     margin-left: 20%;
     border-radius: 20px;
     transition: 0.3s;
@@ -98,71 +98,35 @@ button:hover {
 
 /*-----------------------------------------------*/
 
+#about {
+    background-color: white;
+    color: rgba(55, 55, 55, 1);
+    padding: 5em 10em;
+    height: 100vh;
+    position: relative;
+}
+
 .about {
     display: flex;
     gap: 40px;
-}
-
-.image-container {
-    width: 40%;
-    position: relative;
+    height: 80vh;
     overflow: hidden;
 }
 
 .text-container {
     width: 50%;
-    max-height: 60vh;
-    overflow-y: auto; 
 }
-
-#about {
-    background: rgba(55, 55, 55, 0.8);
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    padding: 5em 10em;
-}
-
-/* .about {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-gap: 40px;
-} */
-
-/* .image-container {
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    overflow: hidden;
-} */
 
 .kahn-topview {
     width: 100%;
-    height: auto;
     border-radius: 20px;
+    padding-top: 40vh;
 }
 
 .text-section-1, .text-section-2, .text-section-3 {
     opacity: 0;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-
-/* .text-container {
-    align-self: center;
-}  */
-
-/* .text-container {
-    position: absolute;
-    width: 60%;
-    text-align: center;
-} */
-
-/* .text-section {
-    padding-top: 10vh;
-    padding-left: 50px;
-    opacity: 0;
-    transition: opacity 0.6s ease-out;
-} */
 
 
 /*-----------------------------------------------*/
@@ -176,6 +140,7 @@ button:hover {
 #fahrten {
     background: rgba(55, 55, 55, 0.8);
     color: #f7f5f4;
+    margin-top: 10em;
 }
 
 .gallery h3, p {
@@ -259,7 +224,10 @@ button:hover {
 
 /*-----------------------------------------------*/
 
-#wir {
+#wir {    
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
 }
 
 .foto-gallery {
@@ -274,15 +242,14 @@ button:hover {
     min-width: 30vw;
     flex: 0 0 30vw;
     overflow: hidden;
-    padding-right: 15px;
-    padding-top: 20vh;
+    padding-top: 15vh;
     display: flex;
     flex-direction: column;
 }
 
 .card-wrapper img {
     max-width: 50%;
-    height: auto;
+    height: 100%;
     border-radius: 15%;
     margin-bottom: 10px;
 }

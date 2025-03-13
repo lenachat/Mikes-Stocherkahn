@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+  // ----- Header Animation -----
+  // gsap.to(".heading", {
+  //   duration: 2,
+  //   text: "Mikes Stocherkahn",  // Uses TextPlugin
+  //   ease: "none"
+  // });
+
+  // ----- Wir Section Animation -----
 
   const fotoGallery = document.querySelector(".foto-gallery");
 
@@ -12,8 +21,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const scrollAmount = getScrollAmount();
 
   const tween = gsap.to(fotoGallery, {
-    x: -scrollAmount,
-    duration: 3,
+    x: -scrollAmount * 2,
+    duration: 1.5,
     ease: "none",
   });
 
@@ -26,8 +35,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     animation: tween,
     invalidateOnRefresh: true, // Recalculate on resize
     markers: false,
+    pinSpacing: true,
   });
 
+
+  // ----- Fahrten Section Animation -----
 
   const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
   const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
@@ -42,12 +54,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     console.log("desktop");
 
     // Pin the right side container as you scroll
-    ScrollTrigger.create({
-      trigger: ".gallery",
-      start: "top top",
-      end: "bottom bottom",
-      pin: ".right",
-      pinSpacing: false, // Disable additional spacing
+    gsap.to(".right", {
+      scrollTrigger: {
+        trigger: ".gallery",
+        start: "top top",
+        end: "bottom bottom",
+        pin: ".right",
+        pinSpacing: true, // Disable additional spacing
+      }
     });
 
     // Create scrolltrigger for each text section
@@ -59,67 +73,77 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       ScrollTrigger.create({
         trigger: headline,
-        start: "top 70%", // Start the animation when the text enters the view
-        end: "top 30%", // End the animation when the text reaches 50% of the screen
+        start: "top 70%",
+        end: "top 30%",
         animation: animation,
-        scrub: 1, // Scrubbing smoothens the effect with scroll
-        markers: false, // Optional: Remove markers for debugging
+        scrub: 1,
+        markers: false,
+        pinSpacing: true,
       });
     });
   });
 
-  // About Section Animation
-  ScrollTrigger.create({
-    trigger: ".text-container",
-    start: "top 30%",
-    end: () => "+=" + document.querySelector(".text-container").scrollHeight,
-    pin: true,
-    scrub: true,
-    markers: false,
-    invalidateOnRefresh: true,
-  });
+  // ----- About Section Animation -----
 
-  gsap.to(".kahn-topview", {
-    y: "-50%",
+  gsap.to('#about', {
     scrollTrigger: {
       trigger: "#about",
       start: "top top",
-      end: "bottom top",
+      end: "bottom bottom",
+      scrub: 1,
+      markers: false,
+      pinSpacing: false,
+      pin: true,
+    },
+  })
+
+  gsap.to(".kahn-topview", {
+    y: "-100vh",
+    duration: 2,
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top top",
+      end: "bottom bottom",
       scrub: true,
+      markers: false,
+      pinSpacing: false,
     }
   });
 
-  gsap.to(".text-section-1", {
-    autoAlpha: 1,
-    duration: 2,
-    scrollTrigger: {
-      trigger: ".text-section-1",
-      start: "top 50%",
-      end: () => `+=${document.querySelector('.text-section-1').offsetHeight}`,
-      markers: true,
-    }
-  });
+  // gsap.to(".text-section-1", {
+  //   autoAlpha: 1,
+  //   duration: 2,
+  //   scrollTrigger: {
+  //     trigger: ".kahn-img",
+  //     start: "top 10%",
+  //     end: () => `+=${document.querySelector('.text-section-1').offsetHeight}`,
+  //     scrub: true,
+  //     markers: true,
+  //   }
+  // });
 
-  gsap.to(".text-section-2", {
-    autoAlpha: 1,
-    duration: 2,
-    scrollTrigger: {
-      trigger: ".text-section-2",
-      start: "top 50%",
-      end: () => `+=${document.querySelector('.text-section-2').offsetHeight}`,
-      markers: true,
-    }
-  });
+  // gsap.to(".text-section-2", {
+  //   autoAlpha: 1,
+  //   duration: 2,
+  //   scrollTrigger: {
+  //     trigger: ".text-section-2",
+  //     start: "top 50%",
+  //     end: () => `+=${document.querySelector('.text-section-2').offsetHeight}`,
+  //     scrub: true,
+  //     markers: false,
+  //   }
+  // });
 
-  gsap.to(".text-section-3", {
-    autoAlpha: 1,
-    duration: 2,
-    scrollTrigger: {
-      trigger: ".text-section-3",
-      start: "top 50%",
-      end: () => `+=${document.querySelector('.text-section-3').offsetHeight}`,
-      markers: true,
-    }
-  });
+  // gsap.to(".text-section-3", {
+  //   autoAlpha: 1,
+  //   duration: 2,
+  //   scrollTrigger: {
+  //     trigger: ".text-section-3",
+  //     start: "top 50%",
+  //     end: () => `+=${document.querySelector('.text-section-3').offsetHeight}`,
+  //     scrub: true,
+  //     markers: false,
+  //   }
+  // });
 
 });
