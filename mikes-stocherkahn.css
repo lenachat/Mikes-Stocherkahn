@@ -493,3 +493,10 @@ footer a:hover {
     cursor: pointer;
     color: #a2a1a0;
 }
+
+/*-----------------------------------------------*/
+#impressum {
+    background: rgba(55, 55, 55, 0.8);
+    color: #f7f5f4;
+    padding: 5em 10em;
+}
