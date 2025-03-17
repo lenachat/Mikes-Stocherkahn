@@ -10,33 +10,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // ----- Wir Section Animation -----
 
-  const fotoGallery = document.querySelector(".foto-gallery");
+  // const fotoGallery = document.querySelector(".foto-gallery");
 
-  function getScrollAmount() {
-    let fotoGalleryWidth = fotoGallery.scrollWidth;
-    let windowWidth = window.innerWidth;
-    return fotoGalleryWidth - windowWidth;
-  }
+  // function getScrollAmount() {
+  //   let fotoGalleryWidth = fotoGallery.scrollWidth;
+  //   let windowWidth = window.innerWidth;
+  //   return fotoGalleryWidth - windowWidth;
+  // }
 
-  const scrollAmount = getScrollAmount();
+  // const scrollAmount = getScrollAmount();
 
-  const tween = gsap.to(fotoGallery, {
-    x: -scrollAmount * 2,
-    duration: 1.5,
-    ease: "none",
-  });
+  // const tween = gsap.to(fotoGallery, {
+  //   x: -scrollAmount * 2,
+  //   duration: 1.5,
+  //   ease: "none",
+  // });
 
-  ScrollTrigger.create({
-    trigger: "#wir",
-    start: "top top",
-    end: () => `+=${scrollAmount}`,
-    pin: true,
-    scrub: 1,
-    animation: tween,
-    invalidateOnRefresh: true, // Recalculate on resize
-    markers: false,
-    pinSpacing: true,
-  });
+  // ScrollTrigger.create({
+  //   trigger: "#wir",
+  //   start: "top top",
+  //   end: () => `+=${scrollAmount}`,
+  //   pin: true,
+  //   scrub: 1,
+  //   animation: tween,
+  //   invalidateOnRefresh: true, // Recalculate on resize
+  //   markers: false,
+  //   pinSpacing: true,
+  // });  
 
 
   // ----- Fahrten Section Animation -----
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       let headline2 = detail2.querySelector("img");
       let animation2 = gsap.timeline()
         .to(textParagaraphs[index], { autoAlpha: 1 }); // Move image into view
-        // .set(allParagraphs[index], { autoAlpha: 0 }); // Fade out previous image
+      // .set(allParagraphs[index], { autoAlpha: 0 }); // Fade out previous image
 
       ScrollTrigger.create({
         trigger: headline2,
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         end: "top 30%",
         animation: animation2,
         scrub: 1,
-        markers: true,
+        markers: false,
         pinSpacing: true,
       });
     });
@@ -200,8 +200,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //   markers: true,
   //   pinSpacing: true,
   // });
-// });
-//   });
+  // });
+  //   });
 
   // ----- About Section Animation -----
 
