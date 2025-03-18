@@ -114,7 +114,7 @@ header {
 
 /*-----------------------------------------------*/
 
-#front-page {
+#landing-page {
     height: 100vh;
     width: 100%;
     padding: 0;
@@ -130,7 +130,7 @@ header {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
+    z-index: -1;    
 }
 
 .title {
@@ -146,14 +146,15 @@ header {
     font-size: 2.5em;
 }
 
-.sub-title {
+.sub-heading {
+    align-items: center;
     font-size: 1.5em;
     color: whitesmoke;
     text-shadow: 0;
     position: relative;
 }
 
-button {
+button { 
     padding: 10px 20px;
     border: none;
     background-color: #FFCB30;
@@ -346,10 +347,19 @@ button:hover {
 }
 
 .mobilePhoto {
-	width:80vw;
-	height:80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.mobilePhoto img {
+	width:40vw;
+	height:30vw;
 	margin-top:5em;
-	border-radius:6vw;
+	border-radius:20px;
 }
 
 /*-----------------------------------------------*/
@@ -421,14 +431,8 @@ button:hover {
 
 /*-----------------------------------------------*/
 
-#kontakt {
-  }
-
-.contact-form {
-}
-
-.grid-container-form {
-    width: 50%;
+form {
+    width: 60%; 
     text-align: left;
 }
 
@@ -438,28 +442,20 @@ label {
 }
 
 input, textarea {
-
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
     border-radius: 20px;
     border: 1px solid rgb(57, 54, 54);
-}
-
-#name {
-    width: 60%;
-}
-
-#email {
-    width: 60%;
+    width: 80%;
 }
 
 #message {
-    width: 60%;
     height: 75%;
 }
 
 .submit-button {
+    width: fit-content;
     padding: 10px 20px;
     border: none;
     background-color: #FFCB30;
@@ -510,3 +506,92 @@ footer a:hover {
     color: #f7f5f4;
     padding: 5em 10em;
 }
+
+/*-----------------------------------------------*/
+
+@media (max-width: 1050px) {
+
+    .default-card {
+        padding: 3em 5em;
+    }
+
+    .title {
+        padding: 10%;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.3rem;
+    }
+
+    button { 
+        padding: 10px 20px;
+        font-size: 0.6em;
+    }
+
+    .left {
+		display:none;
+	}
+	
+	.right {
+        justify-content:center;
+        align-items:center;
+        margin: auto;
+		height:auto;
+		width:80%;
+	}	
+	
+	.desktopPhotos {
+		display:none;
+	}
+	
+	.mobileContent {
+		display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:80%;
+	}
+
+    .me-container {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2em;
+    }  
+
+    .portrait img {
+        align-self: center;
+        margin: 0 25%;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;    
+    }
+
+    .grid-container-form {
+        width: 100%;
+        text-align: left;
+    }
+
+    input, textarea, .submit-button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 3em 5em;
+    }
+
+    #impressum {
+        padding: 3em 5em;
+    }
+
+}
+
+@media (max-width: 1050px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+

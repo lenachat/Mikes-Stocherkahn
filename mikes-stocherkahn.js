@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let mm = gsap.matchMedia();
 
   // When viewport is at least 600px wide, apply desktop functionality
-  mm.add("(min-width: 600px)", () => {
+  mm.add("(min-width: 1051px)", () => {
     console.log("desktop");
 
     // Pin the right side container as you scroll
@@ -58,9 +58,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         trigger: ".gallery",
         start: "top top",
-        end: "bottom bottom",
+        end: "bottom 80%",
         pin: ".right",
         pinSpacing: true, // Disable additional spacing
+        markers: false,
       }
     });
 
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       ScrollTrigger.create({
         trigger: headline,
         start: "top 70%",
-        end: "top 30%",
+        end: "top 40%",
         animation: animation,
         scrub: 1,
         markers: false,
