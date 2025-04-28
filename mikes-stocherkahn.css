@@ -66,6 +66,7 @@ header {
     right: 0;
     padding: 1em;
     z-index: 1000;
+    margin: 20px;
 }
 
 .header-contact-link {
@@ -604,6 +605,10 @@ footer {
 } /* background: #fdfff9;
     color: #413022; */
 
+footer h3 {
+    text-decoration: underline;
+}
+
 .footer-container {
     display: flex;
     gap: 30px;
@@ -627,12 +632,6 @@ footer a:hover {
     cursor: pointer;
 }
 
-/*-----------------------------------------------*/
-#impressum {
-    background: rgba(55, 55, 55, 0.8);
-    color: #f7f5f4;
-    padding: 5em 10em;
-}
 
 /*-----------------------------------------------*/
 
