@@ -56,12 +56,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Pin the right side container as you scroll
     gsap.to(".right", {
       scrollTrigger: {
-        trigger: "#fahrten",
+        trigger: ".gallery",
         start: "top top",
         end: "bottom 80%",
         pin: ".right",
         pinSpacing: true, // Disable additional spacing
-        markers: true,
       }
     });
 
@@ -74,12 +73,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       ScrollTrigger.create({
         trigger: headline,
-        start: "top 90%",
+        start: "top 70%",
         end: "top 40%",
         animation: animation,
         scrub: 1,
-        markers: true,
-        pinSpacing: false,
+        markers: false,
+        pinSpacing: true,
       });
     });
   });
