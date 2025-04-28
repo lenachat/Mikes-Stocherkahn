@@ -56,77 +56,147 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Pin the right side container as you scroll
     gsap.to(".right", {
       scrollTrigger: {
-        trigger: ".gallery",
+        trigger: "#fahrten",
         start: "top top",
         end: "bottom 80%",
         pin: ".right",
         pinSpacing: true, // Disable additional spacing
-        markers: false,
+        markers: true,
       }
     });
 
     // Create scrolltrigger for each text section
     details.forEach((detail, index) => {
-      let headline = detail.querySelector("h3");
+      let headline = detail.querySelector("h2");
       let animation = gsap.timeline()
         .to(photos[index], { yPercent: 0 }) // Move image into view
         .set(allPhotos[index], { autoAlpha: 0 }); // Fade out previous image
 
       ScrollTrigger.create({
         trigger: headline,
-        start: "top 70%",
+        start: "top 90%",
         end: "top 40%",
         animation: animation,
         scrub: 1,
-        markers: false,
-        pinSpacing: true,
+        markers: true,
+        pinSpacing: false,
       });
     });
+  });
+
+  // ----- About section horizontal scroll -----
+  const fotoGallery = document.querySelector(".wrapper");
+
+  function getScrollAmount() {
+    let fotoGalleryWidth = fotoGallery.scrollWidth;
+    let windowWidth = window.innerWidth;
+    return fotoGalleryWidth - windowWidth;
+  }
+
+  const scrollAmount = getScrollAmount();
+
+  const tween = gsap.to(fotoGallery, {
+    x: -scrollAmount,
+    duration: 1.5,
+    ease: "none",
+  });
+
+  ScrollTrigger.create({
+    trigger: "#about",
+    start: "top top",
+    end: () => `+=${scrollAmount}`,
+    pin: true,
+    scrub: 1,
+    animation: tween,
+    invalidateOnRefresh: true, // Recalculate on resize
+    markers: true,
+    pinSpacing: false,
+  });
+
+  gsap.to(".item3", {
+    autoAlpha: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: () => `top -15%`,
+      end: () => `+=${0.2 * scrollAmount}`,
+      scrub: true,
+      markers: true,
+    }
+  });
+
+  gsap.to(".item2", {
+    autoAlpha: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: `top 3%`,
+      end: () => `+=${0.2 * scrollAmount}`,
+      scrub: true,
+      markers: true,
+    }
+  });
+
+  gsap.to(".item1", {
+    autoAlpha: 1,
+    duration: 2,
+    scrollTrigger: {
+      trigger: "#about",
+      start: () => `top top`,
+      end: () => `+=${0.2 * scrollAmount}`,
+      scrub: true,
+      markers: true,
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    scrollAmount = getScrollAmount();
+    ScrollTrigger.refresh();
   });
 
   // ----- About Section Animation ----- new version
 
-  const boat = gsap.utils.toArray(".boat-container-section");
-  const textParagaraphs = gsap.utils.toArray(".text-paragraph");
+  // const boat = gsap.utils.toArray(".boat-container-section");
+  // const textParagaraphs = gsap.utils.toArray(".text-paragraph");
 
-  // gsap.set(textParagaraphs, { yPercent: 101 }); // Position images outside the view initially
-  gsap.set(textParagaraphs, { autoAlpha: 0 });
-  const allParagraphs = gsap.utils.toArray(".text-paragraph");
+  // // gsap.set(textParagaraphs, { yPercent: 101 }); // Position images outside the view initially
+  // gsap.set(textParagaraphs, { autoAlpha: 0 });
+  // const allParagraphs = gsap.utils.toArray(".text-paragraph");
 
-  let mm2 = gsap.matchMedia();
+  // let mm2 = gsap.matchMedia();
 
-  // When viewport is at least 600px wide, apply desktop functionality
-  mm2.add("(min-width: 600px)", () => {
+  // // When viewport is at least 600px wide, apply desktop functionality
+  // mm2.add("(min-width: 600px)", () => {
 
-    // Pin the right side container as you scroll
-    gsap.to(".right-2", {
-      scrollTrigger: {
-        trigger: ".gallery-2",
-        start: "top top",
-        end: "bottom bottom",
-        pin: ".right-2",
-        pinSpacing: true, // Disable additional spacing
-      }
-    });
+  //   // Pin the right side container as you scroll
+  //   gsap.to(".right-2", {
+  //     scrollTrigger: {
+  //       trigger: ".gallery-2",
+  //       start: "top top",
+  //       end: "bottom bottom",
+  //       pin: ".right-2",
+  //       pinSpacing: true, // Disable additional spacing
+  //     }
+  //   });
 
-    // Create scrolltrigger for each text section
-    boat.forEach((detail2, index) => {
-      let headline2 = detail2.querySelector("img");
-      let animation2 = gsap.timeline()
-        .to(textParagaraphs[index], { autoAlpha: 1 }); // Move image into view
-      // .set(allParagraphs[index], { autoAlpha: 0 }); // Fade out previous image
+  //   // Create scrolltrigger for each text section
+  //   boat.forEach((detail2, index) => {
+  //     let headline2 = detail2.querySelector("img");
+  //     let animation2 = gsap.timeline()
+  //       .to(textParagaraphs[index], { autoAlpha: 1 }); // Move image into view
+  //     // .set(allParagraphs[index], { autoAlpha: 0 }); // Fade out previous image
 
-      ScrollTrigger.create({
-        trigger: headline2,
-        start: "top 70%",
-        end: "top 30%",
-        animation: animation2,
-        scrub: 1,
-        markers: false,
-        pinSpacing: true,
-      });
-    });
-  });
+  //     ScrollTrigger.create({
+  //       trigger: headline2,
+  //       start: "top 70%",
+  //       end: "top 30%",
+  //       animation: animation2,
+  //       scrub: 1,
+  //       markers: false,
+  //       pinSpacing: true,
+  //     });
+  //   });
+  // });
 
   // ----- About Section Animation ----- new version 2
 

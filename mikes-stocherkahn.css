@@ -4,9 +4,9 @@ body {
     color: #f7f5f4;
     margin: 0;
     padding: 0;
-    font-size: 1.3em;
-    background: url("/images/stoka.jpg") no-repeat center center fixed;
+    background: url("/images/background.png") no-repeat center center fixed;
     background-size: cover;   
+    overflow-x: hidden;
 }   
 
 /* body::before {
@@ -32,13 +32,18 @@ h1 {
     
 }
 
-h2, h3 {
-    letter-spacing: 0.5em;
+h2 {
+    letter-spacing: 0.1em;
     color: #FFCB30;
+    font-size: 2.8em;
+}
+
+p, ul {
+    font-size: 1.5em;
 }
 
 .default-card {
-    background: rgba(55, 55, 55, 0.8);
+    background: rgba(55, 55, 55, 0.85);
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px); */
@@ -209,14 +214,14 @@ button:hover {
 } */
 
 /*---------------------about new version--------------------------*/
-
+/* 
 #about {
     background:white;
     color: rgba(55, 55, 55, 1);
     padding: 5em 10em;
 }
 
-.gallery-2 h3, p {
+.gallery-2 h2, p {
     z-index: 2;
 }
 
@@ -269,8 +274,58 @@ button:hover {
 	width:100%;
 	height:100%;
     background: white;
+} */
+
+
+/*---------------------about vertical scroll--------------------------*/
+
+#about {
+    background: #fdfff9;
+    /* background: rgba(55, 55, 55, 0.8); */
+    color: #f7f5f4;
+    padding: 5em 10em;
 }
 
+.wrapper {
+    width: 150vw;
+    height: 75vh;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    background: white;
+}
+  
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    width: max-content;
+    padding: 0;
+    background: grey;
+}
+
+.large {
+    grid-column: span 3;
+    background: teal;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.large img {
+    display: block;
+    object-fit: cover;  
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    background: coral;
+    color: white;
+    border-radius: 10px; 
+    padding: 0 15vw; 
+    opacity: 0;  
+} 
 
 /*-----------------------------------------------*/
     /* background: rgba(55, 55, 55, 0.8);
@@ -281,18 +336,19 @@ button:hover {
 
 
 #fahrten {
-    background: rgba(55, 55, 55, 0.8);
+    background: rgba(55, 55, 55, 0.85);
     color: #f7f5f4;
-    /* margin-top: 10em; */
+   
 }
 
-.gallery h3, p {
+.gallery h2, p {
     z-index: 2;
 }
 
 .gallery {
-  display:flex;	
-  
+  display: flex;
+  align-items: center;
+
 }
 
 .left {
@@ -377,6 +433,9 @@ button:hover {
 /*-----------------------------------------------*/
 
 #me {
+    background: #fdfff9;
+    color: #413022;
+    padding: 5em 10em;
 }
 
 .me-container {
@@ -431,6 +490,24 @@ button:hover {
 
 /*-----------------------------------------------*/
 
+#kontakt {
+
+}
+
+.kontakt-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 3em;
+}   
+
+.kontakt-container a {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    text-decoration: none;
+    color:#f7f5f4;
+}
+
 form {
     width: 60%; 
     text-align: left;
@@ -474,9 +551,17 @@ input, textarea {
 
 /*-----------------------------------------------*/
 
+#faq {
+    background: #fdfff9;
+    color: #413022;
+    padding: 5em 10em;
+}
+
+/*-----------------------------------------------*/
+
 footer {
-    background: rgba(55, 55, 55, 1);
-    color: #f7f5f4;
+    background: #fdfff9;
+    color: #413022;
     padding: 1.5em 10em;
     font-size: 0.8em;
 } 
@@ -488,16 +573,16 @@ footer {
 
 footer p {
     margin: 0;
+    color: #413022;
 }
 
 footer a {
     text-decoration: none;
-    color: #f7f5f4;
+    color: #413022;
 }
 
 footer a:hover {
     cursor: pointer;
-    color: #a2a1a0;
 }
 
 /*-----------------------------------------------*/
