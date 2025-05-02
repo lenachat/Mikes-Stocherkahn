@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mikes Stocherkahnfahrten</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Dela+Gothic+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-contact-link">
+                <a href="tel:+491774157821"
+                    style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #FFCB30;">
+                    <span class="phone-number">0177 – 415 78 21</span>
+                    <span class="phone-icon">
+                        <svg class="phone" width="25" height="25" viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg" fill="#FFCB30">
+                            <path
+                                d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div id="landing-page">
+        <div class="video-container">
+            <!-- Fallback Image -->
+            <img src="images/fallback.jpg" alt="Hintergrundbild" class="fallback-bg" />
+
+            <!-- Desktop Video -->
+            <video class="bg-video desktop" autoplay muted loop playsinline>
+                <source src="images/Stocherkahn_v2.mp4" type="video/mp4">
+                Dein Browser unterstützt kein HTML5-Video.
+            </video>
+
+            <!-- Mobile Video -->
+            <video class="bg-video mobile" autoplay muted loop playsinline>
+                <source src="images/Stocherkahn_v2_mobile.mp4" type="video/mp4">
+                Dein Browser unterstützt kein HTML5-Video.
+            </video>
+        </div>
+        <div class="title">
+            <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">Mikes Stocherkahn</h1>
+            <p class="sub-heading" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                Tübingen vom Neckar aus erleben! <br>
+            </p>
+            <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <a href="#fahrten">Zu den Fahrten</a>
+            </button>
+        </div>
+        <div class="down-arrow" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <svg height="30" width="30" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
+                xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#f7f5f4">
+                <path
+                    d="M383.6,322.7L278.6,423c-5.8,6-13.7,9-22.4,9c-8.7,0-16.5-3-22.4-9L128.4,322.7c-12.5-11.9-12.5-31.3,0-43.2  c12.5-11.9,32.7-11.9,45.2,0l50.4,48.2v-217c0-16.9,14.3-30.6,32-30.6c17.7,0,32,13.7,32,30.6v217l50.4-48.2  c12.5-11.9,32.7-11.9,45.2,0C396.1,291.4,396.1,310.7,383.6,322.7z" />
+            </svg>
+        </div>
+    </div>
+
+    <div id="me">
+        <div data-aos="fade-left" data-aos-duration="500">
+            <!-- <h2>Hi, ich bin Mike !</h2> -->
+            <div class="me-container">
+                <div class="portrait" data-aos="fade-up" data-aos-duration="500">
+                    <img src="images/dad_v6.png" alt="">
+                </div>
+                <div class="text-container">
+                    <h2>An Bord mit Mike</h2>
+                    <p data-aos="fade-up" data-aos-duration="500">
+                        Hi, ich bin Mike, Ihr Stocherkahnfahrer in Tübingen. <br>
+                    </p>
+                    <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                        Mit über 30 Jahren Erfahrung lade ich Sie ein, Tübingen vom Wasser aus zu erleben – persönlich,
+                        entspannt und mit Herz.
+                    </p>
+                    <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                        Ich freue mich auf Sie und Ihre Gruppe!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fahrten">
+        <h2>Unser Angebot</h2>
+        <div class="gallery">
+            <div class="left">
+                <div class="desktopContent">
+                    <div class="desktopContentSection">
+                        <h3 data-aos="fade-up" data-aos-duration="500">Sammelfahrten</h3>
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            Steigen Sie spontan ein, keine Mindestteilnehmerzahl nötig!
+                            Für Einzeplersonen oder kleine Gruppen
+                        </p>
+                        <ul data-aos="fade-up" data-aos-duration="500">
+                            <li>Erwachsene: 11€ p.P.</li>
+                            <li> Jugendliche / Studierende: 9€ p.P.</li>
+                            <li>Kinder bis 12 J.: 7€ p.P.</li>
+                        </ul>
+                        <a href="#abfahrtsorte" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
+                            <p class="location">
+                                <svg width="20" height="20" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#f7f5f4">
+                                    <path
+                                        d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z" />
+                                </svg>
+                                Hölderlinturm
+                            </p>
+                        </a>
+                        <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#kontakt">Fahrt buchen</a>
+                        </button>
+                    </div>
+                    <div class="desktopContentSection">
+                        <h3 data-aos="fade-up" data-aos-duration="500">Gruppenfahrten</h3>
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            Exklusiv für Sie und Ihre Gruppe.
+                            Ideal für Familien, Schulklassen oder besondere Anlässe. Zeit und Route nach Absprache.
+                        </p>
+                        <ul data-aos="fade-up" data-aos-duration="500">
+                            <li>Bis zu 26 Personen pro Stocherkahn</li>
+                            <li>Mehrere Kähne gleichzeitig buchbar</li>
+                            <li>Pauschalpreis ab 90€</li>
+                        </ul>
+                        <a href="#abfahrtsorte" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
+                            <p class="location">
+                                <svg width="20" height="20" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#f7f5f4">
+                                    <path
+                                        d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z" />
+                                </svg>
+                                Hölderlinturm, Casinospitze oder nach Absprache
+                            </p>
+                        </a>
+                        <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#kontakt">Fahrt buchen</a>
+                        </button>
+                    </div>
+                    <div class="desktopContentSection">
+                        <h3 data-aos="fade-up" data-aos-duration="500">Grillfahrten</h3>
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            Genuss und Entspannung auf dem Wasser.
+                            Sommer, Wasser, Grillduft – so schmeckt Tübingen!
+                        </p>
+                        <ul data-aos="fade-up" data-aos-duration="500">
+                            <li>Private Fahrt mit Grillen auf dem Neckar</li>
+                            <li>Wir stellen alles was man braucht - Grillgut, Grill, Besteck und Stimmung</li>
+                            <li>Pauschalpreis ab 160€ pro Gruppe</li>
+                        </ul>
+                        <a href="#abfahrtsorte" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
+                            <p class="location">
+                                <svg width="20" height="20" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#f7f5f4">
+                                    <path
+                                        d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z" />
+                                </svg>
+                                Hölderlinturm, Casinospitze oder nach Absprache
+                            </p>
+                        </a>
+                        <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#kontakt">Fahrt buchen</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="mobileContent">
+                    <div class="mobilePhoto"><img src="images/sammelfahrt.jpg" alt=""></div>
+                    <div class="mobileContentSection">
+                        <h3 data-aos="fade-up" data-aos-duration="500">Sammelfahrten</h3>
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            Steigen Sie spontan ein, keine Mindestteilnehmerzahl nötig!
+                            Für Einzeplersonen oder kleine Gruppen
+                        </p>
+                        <ul data-aos="fade-up" data-aos-duration="500">
+                            <li>Erwachsene: 11€ p.P.</li>
+                            <li> Jugendliche / Studierende: 9€ p.P.</li>
+                            <li>Kinder bis 12 J.: 7€ p.P.</li>
+                        </ul>
+                        <a href="#abfahrtsorte" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
+                            <p class="location">
+                                <svg width="20" height="20" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#f7f5f4">
+                                    <path
+                                        d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z" />
+                                </svg>
+                                Hölderlinturm
+                            </p>
+                        </a>
+                        <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#kontakt">Fahrt buchen</a>
+                        </button>
+                    </div>
+                    <div class="mobilePhoto"><img src="images/gruppenfahrt.jpg" alt=""></div>
+                    <div class="mobileContentSection">
+                        <h3 data-aos="fade-up" data-aos-duration="500">Gruppenfahrten</h3>
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            Exklusiv für Sie und Ihre Gruppe.
+                            Ideal für Familien, Schulklassen oder besondere Anlässe. Zeit und Route nach Absprache.
+                        </p>
+                        <ul data-aos="fade-up" data-aos-duration="500">
+                            <li>Bis zu 26 Personen pro Stocherkahn</li>
+                            <li>Mehrere Kähne gleichzeitig buchbar</li>
+                            <li>Pauschalpreis ab 90€</li>
+                        </ul>
+                        <a href="#abfahrtsorte" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
+                            <p class="location">
+                                <svg width="20" height="20" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#f7f5f4">
+                                    <path
+                                        d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z" />
+                                </svg>
+                                Hölderlinturm, Casinospitze oder nach Absprache
+                            </p>
+                        </a>
+                        <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#kontakt">Fahrt buchen</a>
+                        </button>
+                    </div>
+                    <div class="mobilePhoto"><img src="images/grillfahrt.jpg" alt=""></div>
+                    <div class="mobileContentSection">
+                        <h3 data-aos="fade-up" data-aos-duration="500">Grillfahrten</h3>
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            Genuss und Entspannung auf dem Wasser.
+                            Sommer, Wasser, Grillduft – so schmeckt Tübingen!
+                        </p>
+                        <ul data-aos="fade-up" data-aos-duration="500">
+                            <li>Private Fahrt mit Grillen auf dem Neckar</li>
+                            <li>Wir stellen alles was man braucht - Grillgut, Grill, Besteck und Stimmung</li>
+                            <li>Pauschalpreis ab 160€ pro Gruppe</li>
+                        </ul>
+                        <a href="#abfahrtsorte" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
+                            <p class="location">
+                                <svg width="20" height="20" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#f7f5f4">
+                                    <path
+                                        d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z" />
+                                </svg>
+                                Hölderlinturm, Casinospitze oder nach Absprache
+                            </p>
+                        </a>
+                        <button class="book-now-button" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#kontakt">Fahrt buchen</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="desktopPhotos">
+                    <div class="desktopPhoto"><img src="images/sammelfahrt.jpg" alt=""></div>
+                    <div class="desktopPhoto"><img src="images/gruppenfahrt.jpg" alt=""></div>
+                    <div class="desktopPhoto"><img src="images/grillfahrt.jpg" alt=""></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="abfahrtsorte">
+        <h2>Wo geht's los?</h2>
+        <p data-aos="fade-up" data-aos-duration="500">
+            Unsere Stocherkahnfahrten starten an verschiedenen Anlegestellen entlang des Neckars. Sammelfahrten starten
+            immer am Hölderlinturm.
+            Für alle anderen Fahrten kann der Startpunkt individuell vereinbart werden.
+        </p>
+        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            Finden Sie hier die
+            passende Anlegestelle:
+        </p>
+
+        <div class="anlegestellen-overview">
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <h4> Hölderlinturm</h4>
+                <div style="width: 100%">
+                    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=H%C3%B6lderlinturm+(Anlegestelle%20H%C3%B6lderlinturm)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                            href="https://www.gps.ie/collections/personal-trackers/">Personal GPS</a>
+                    </iframe>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                <h4>Casinospitze</h4>
+                <div style="width: 100%">
+                    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=48.517854,%209.061852+(Anlegestelle%20Neckarflair)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                            href="https://www.gps.ie/collections/personal-trackers/">Personl trackers</a>
+                    </iframe>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <h4>Jugendherberge</h4>
+                <div style="width: 100%">
+                    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=48.518254,%209.063256+(Anlegestelle%20Neckarflair)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                            href="https://www.gps.ie/collections/personal-trackers/">Personl trackers</a>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <p>
+            Weitere Abfahrtsorte möglich, wie zum Beispiel am Hotel Domizil oder am Neckarmüller.
+        </p>
+    </div>
+
+    <div id="kontakt" class="default-card">
+        <h2>Kontakt</h2>
+        <div class="kontakt-container">
+            <div>
+                <p data-aos="fade-up" data-aos-duration="500">
+                    Bei Fragen jeglicher Art oder zur Buchung gerne Anrufen oder hier über das Kontaktformular melden.
+                </p>
+                <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    Ich freue mich auf Ihre Nachricht und Sie bald auf dem Neckar begrüßen zu dürfen!
+                </p>
+                <a href="tel:+491774157821" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#f7f5f4">
+                        <path
+                            d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                    </svg>
+                    0177 – 415 78 21
+                </a>
+                <br>
+                <a href="mailto:s24k24@gmail.com" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#f7f5f4">
+                        <path
+                            d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z" />
+                    </svg>
+                    s24k24@gmail.com
+                </a>
+            </div>
+            <form>
+                <div class="grid-container-form">
+                    <label for="name" data-aos="fade-up" data-aos-duration="500">Name:</label>
+                    <input type="text" id="name" name="name" required data-aos="fade-up" data-aos-duration="500">
+                    <label for="email" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Email:</label>
+                    <input type="text" id="email" name="email" required data-aos="fade-up" data-aos-duration="500"
+                        data-aos-delay="100">
+                    <label for="message" data-aos="fade-up" data-aos-duration="500"
+                        data-aos-delay="200">Nachricht:</label>
+                    <textarea id="message" name="message" required rows="8" placeholder="" data-aos="fade-up"
+                        data-aos-duration="500" data-aos-delay="200"></textarea>
+                    <input class="submit-button" type="submit" value="Senden" data-aos="fade-up" data-aos-duration="500"
+                        data-aos-delay="300">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="faq">
+        <h2>Gut zu wissen</h2>
+        <div class="faq-item" data-aos="fade-up" data-aos-duration="500">
+            <div class="faq-question">
+                <p>
+                    Wie viele Personen passen in einen Stocherkahn?
+                </p>
+                <svg height="25" width="25" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFCB30">
+                    <path
+                        d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" />
+                </svg>
+            </div>
+            <div class="faq-content">
+                In einen Stocherkahn passen bis zu 26 Personen. Bei Bedarf können auch mehrere Kähne gleichzeitig
+                gebucht werden.
+            </div>
+        </div>
+        <hr data-aos="fade-up" data-aos-duration="500">
+        <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            <div class="faq-question">
+                <p>
+                    Wie lange dauert eine Fahrt?
+                </p>
+                <svg height="25" width="25" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFCB30">
+                    <path
+                        d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" />
+                </svg>
+            </div>
+            <div class="faq-content">
+                Eine Fahrt dauert ca. 60 Minuten. Dabei legen wir ca. 2 km Strecke um die Neckarinsel zurück. Auf
+                Anfrage
+                kann dies auch verlängert werden.
+            </div>
+        </div>
+        <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+        <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="faq-question">
+                <p>
+                    Was passiert wenn es regnet?
+                </p>
+                <svg height="25" width="25" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFCB30">
+                    <path
+                        d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" />
+                </svg>
+            </div>
+            <div class="faq-content">
+                Wir haben eine Gut-Wetter-Garantie: Sollte es innerhalb von 30 Minuten vor der Stocherkahnfahrt regnen,
+                kann die Fahrt mit einem kurzen Anruf kostenlos storniert oder verschoben werden.
+            </div>
+        </div>
+        <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <div class="faq-question">
+                <p>
+                    Kann ich auf dem Kahn essen und trinken?
+                </p>
+                <svg height="25" width="25" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFCB30">
+                    <path
+                        d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" />
+                </svg>
+            </div>
+            <div class="faq-content">
+                Ja, selbst mitgebrachte Getränke und Speisen sind herzlich willkommen!
+            </div>
+        </div>
+        <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+            <div class="faq-question">
+                <p>
+                    Zu welchen Zeiten kann ich fahren?
+                </p>
+                <svg height="25" width="25" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFCB30">
+                    <path
+                        d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" />
+                </svg>
+            </div>
+            <div class="faq-content">
+                Fahrten sind täglich von März bis Oktober möglich. Die genauen Zeiten können individuell vereinbart
+                werden.
+            </div>
+        </div>
+        <hr data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+        <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="faq-question">
+                <p>
+                    Wo legt der Stocherkahn an?
+                </p>
+                <svg height="25" width="25" style="enable-background:new 0 0 512 512;" version="1.1"
+                    viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFCB30">
+                    <path
+                        d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" />
+                </svg>
+            </div>
+            <div class="faq-content">
+                Es gibt mehrere Anlegestellen in Tübingen. Die Sammelfahrten starten immer am Hölderlinturm. Für alle
+                anderen Fahrten kann der Startpunkt individuell vereinbart werden.
+                Möglichkeiten sind z.B. Hölderlinturm, Casinospitze, Domizil oder am Neckarmüller. <br>
+                Siehe auch: <a href="#abfahrtsorte" style="color:#413022">Anlegestellen</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="impressum.html">
+            <h4 class="impressum-link">Impressum</h4>
+        </a>
+        <div class="footer-container">
+            <p>
+                Michael Wiehl <br> </p>
+            <a href="tel:+491774157821">
+                <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#f7f5f4">
+                    <path
+                        d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z" />
+                </svg>
+                0177 – 415 78 21
+            </a>
+            <a href="mailto:s24k24@gmail.com">
+                <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#f7f5f4">
+                    <path
+                        d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z" />
+                </svg>
+                s24k24@gmail.com
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const button = item.querySelector('.faq-question');
+
+            button.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
