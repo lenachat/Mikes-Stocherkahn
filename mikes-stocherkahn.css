@@ -179,8 +179,8 @@ header {
     border: 3px solid #FFCB30;
     border-radius: 10px;
     transition: 0.3s;
+    width: fit-content;
 }
-
 
 button>a {
     color:  #f7f5f4;
@@ -513,6 +513,23 @@ button:hover a {
 .card-wrapper p {
     margin: 0.5em 0;
 }
+
+/*-----------------------------------------------*/
+
+#abfahrtsorte {
+    background: #fdfff9;
+    color: #413022;
+    padding: 5em 8em;
+}
+
+.anlegestellen-overview {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+
 
 /*-----------------------------------------------*/
 
