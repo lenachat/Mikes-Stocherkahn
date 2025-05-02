@@ -58,9 +58,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         trigger: ".gallery",
         start: "top top",
-        end: "bottom 80%",
+        end: "bottom bottom",
         pin: ".right",
-        pinSpacing: true, // Disable additional spacing
+        pinSpacing: false, // Disable additional spacing
+        markers: false,
       }
     });
 
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         animation: animation,
         scrub: 1,
         markers: false,
-        pinSpacing: true,
+        pinSpacing: false,
       });
     });
   });
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: () => `top top`,
       end: () => `+=${0.2 * scrollAmount}`,
       scrub: true,
-      markers: true,
+      markers: false,
     }
   });
 
