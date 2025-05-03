@@ -1,14 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     font-weight: 200;
     color: #f7f5f4;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background: url("./images/DJI_0255.jpg") no-repeat center center fixed;
     background-size: cover;   
-    overflow-x: hidden;
     width: 100vw;
 }   
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+img, video {
+    max-width: 100%;
+    display: block;
+  }
 
 h1, h2, h3 {
     text-transform: uppercase;
@@ -145,38 +163,35 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden;   
+    position: relative;
+    z-index: 0;
+    background-color: #111;
 }
 
-.video-background {
-    position: relative;
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
 }
 
-.bg-video {
+.bg-video, .fallback-bg {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.bg-video.mobile {
-    display: none;
-}
-  
 .fallback-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    overflow: hidden;
+    z-index: -2;
 }
 
 .title {
@@ -184,6 +199,7 @@ header {
     top: 30vh;
     padding-left: 20%;
     padding-right: 20%;
+    z-index: 10;
 }
 
 .heading {
@@ -242,10 +258,10 @@ button:hover a {
 
 @keyframes bounce {
     0%, 100% {
-      transform: translateY(0);
+      transform: translate(-50%, 0);
     }
     50% {
-      transform: translateY(10px);
+      transform: translate(-50%, 10px);
     }
   }
 
@@ -713,18 +729,29 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    .bg-video.desktop {
-      display: none;
+
+    p, ul {
+        font-size: 1.8em;
     }
-  
-    .bg-video.mobile {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+
+    .phone {
+        transform: scale(2);
+    }
+
+    .heading {
+       font-size: 2.2em;
+    }
+
+    .sub-heading {
+        font-size: 1.5em;
+    }
+    .down-arrow {
+        font-size: 1.3em;
+    }
+
+    .book-now-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
     }
 
     #fahrten h2 {
@@ -733,4 +760,5 @@ footer a:hover {
         padding-top: 2em;
         margin: 0;
     }
-  }
+  }   
+  

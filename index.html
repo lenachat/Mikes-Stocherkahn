@@ -39,17 +39,20 @@
             <img src="./images/fallback.jpg" alt="Hintergrundbild" class="fallback-bg" />
 
             <!-- Desktop Video -->
-            <video class="bg-video desktop" autoplay muted loop playsinline>
+            <video class="bg-video" autoplay muted loop playsinline>
                 <source src="./images/Stocherkahn_v2.mp4" type="video/mp4">
                 Dein Browser unterstützt kein HTML5-Video.
             </video>
 
             <!-- Mobile Video -->
-            <video class="bg-video mobile" autoplay muted loop playsinline>
-                <source src="./images/Stocherkahn_v2_mobile.mp4" type="video/mp4">
-                Dein Browser unterstützt kein HTML5-Video.
-            </video>
+            <!-- <div>
+                    <video class="bg-video mobile" autoplay muted loop playsinline>
+                    <source src="./images/Stocherkahn_v2.mp4" type="video/mp4">
+                    Dein Browser unterstützt kein HTML5-Video.
+                </video>
+                </div> -->
         </div>
+
         <div class="title">
             <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">Mikes Stocherkahn</h1>
             <p class="sub-heading" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -500,6 +503,17 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.querySelector(".bg-video");
+            if (video) {
+                video.muted = true;
+                video.play().catch(() => {
+                    // Safari blockiert evtl. trotzdem – hier kannst du optional eine Fallback-Logik einbauen
+                });
+            }
+        });
+    </script>
     <script>
         const faqItems = document.querySelectorAll('.faq-item');
 
