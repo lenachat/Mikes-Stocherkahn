@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: url("./images/DJI_0255.jpg") no-repeat center center fixed;
+    background: url("./images/background.jpg") no-repeat center center fixed;
     background-size: cover;   
     width: 100vw;
 }   
@@ -158,7 +158,7 @@ header {
 
 /*-----------------------------------------------*/
 
-#landing-page {
+#home {
     height: 100vh;
     width: 100%;
     padding: 0;
@@ -267,13 +267,13 @@ button:hover a {
 
 /*-----------------------------------------------*/
 
-#me {
+#about {
     background: #fdfff9;
     color: #413022;
     padding: 5em 12em;
 }
 
-.me-container {
+.about-container {
     display: grid;
     grid-template-columns: 35% auto;
     gap: 3em;
@@ -288,13 +288,13 @@ button:hover a {
 
 /*-----------------------------------------------*/
 
-#fahrten {
+#tours {
     background: rgba(18, 18, 18, 0.85);
     color: #f7f5f4;
     width: 100vw;
 }
     
-#fahrten h2 {
+#tours h2 {
     margin: 0;
     padding-left: 3em;
     padding-top: 2em;
@@ -397,7 +397,7 @@ button:hover a {
 
 /*-----------------------------------------------*/
 
-#abfahrtsorte {
+#location {
     background: #fdfff9;
     color: #413022;
     padding: 5em 8em;
@@ -412,16 +412,16 @@ button:hover a {
 
 /*-----------------------------------------------*/
 
-#kontakt {
+#contact {
     padding: 5em 8em;
 }
 
-.kontakt-container {
+.contact-container {
     display: grid;
     grid-template-columns: 40% 60%;
 }   
 
-.kontakt-container a {
+.contact-container a {
     display: flex; 
     align-items: center; 
     gap: 8px; 
@@ -598,7 +598,7 @@ footer a:hover {
         font-size: 0.6em;
     }
 
-    #fahrten h2 {
+    #tours h2 {
         text-align: center;
         padding: 0;
         padding-top: 2em;
@@ -656,12 +656,12 @@ footer a:hover {
         box-shadow: 14px 14px 10px rgba(0, 0, 0, 0.4);
     }
 
-    #me {
+    #about {
         padding: 5em 2em;
         text-align: center;
     }
 
-    .me-container {
+    .about-container {
         display: grid;
         grid-template-columns: 100%;
         gap: 2em;
@@ -681,7 +681,7 @@ footer a:hover {
         text-align: left;
     }
 
-    #abfahrtsorte {
+    #location {
         padding: 5em 2em;
     }
 
@@ -692,7 +692,7 @@ footer a:hover {
         margin: 0 auto;
     }
 
-    #kontakt {
+    #contact {
         padding: 5em 2em;
     }
 
@@ -700,11 +700,11 @@ footer a:hover {
         width: 100%;
     }
 
-    .kontakt-container {
+    .contact-container {
         display: block;
     }
 
-    .kontakt-container form {
+    .contact-container form {
         margin: 50px 0;
     }
 
@@ -754,7 +754,7 @@ footer a:hover {
         font-size: 0.8em;
     }
 
-    #fahrten h2 {
+    #tours h2 {
         text-align: center;
         padding: 0;
         padding-top: 2em;
