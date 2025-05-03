@@ -4,7 +4,7 @@ body {
     color: #f7f5f4;
     margin: 0;
     padding: 0;
-    background: url("/images/DJI_0255.jpg") no-repeat center center fixed;
+    background: url("./images/DJI_0255.jpg") no-repeat center center fixed;
     background-size: cover;   
     overflow-x: hidden;
     width: 100vw;
