@@ -3,15 +3,13 @@
 
 <head>
     <title>Mikes Stocherkahnfahrten</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <link rel="icon" type="image/x-icon" href="./images/sailboat.ico">
+    <link rel="stylesheet" href="styles.min.css">
+    <script src="script.min.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="sailboat.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Dela+Gothic+One&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Dela+Gothic+One&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
@@ -37,12 +35,8 @@
     <main>
         <div id="home">
             <div class="video-container">
-                <!-- Fallback Image -->
-                <img src="./images/fallback.jpg" alt="Hintergrundbild" class="fallback-bg" />
-
-                <!-- Desktop Video -->
-                <video class="bg-video" autoplay muted loop playsinline alt="Hintergrundvideo">
-                    <source src="./images/tuebingen_aerial.mp4" type="video/mp4">
+                <video class="bg-video" autoplay muted loop playsinline poster="./fallback.jpg" alt="Hintergrundvideo">
+                    <source src="./tuebingen_aerial.mp4" type="video/mp4">
                     Dein Browser unterst&uuml;tzt kein HTML5-Video.
                 </video>
             </div>
@@ -70,7 +64,7 @@
             <div data-aos="fade-left" data-aos-duration="500">
                 <div class="about-container">
                     <div class="portrait" data-aos="fade-up" data-aos-duration="500">
-                        <img src="./images/mike.png" alt="Mike Portrait">
+                        <img src="./mike.png" alt="Mike Portrait">
                     </div>
                     <div class="text-container">
                         <h2>An Bord mit Mike</h2>
@@ -177,7 +171,7 @@
 
                 <div class="right">
                     <div class="mobileContent">
-                        <div class="mobilePhoto"><img src="./images/sammelfahrt.jpg" alt="Foto Sammelfahrten"></div>
+                        <div class="mobilePhoto"><img src="./sammelfahrt.jpg" alt="Foto Sammelfahrten"></div>
                         <div class="mobileContentSection">
                             <h3 data-aos="fade-up" data-aos-duration="500">Sammelfahrten</h3>
                             <p data-aos="fade-up" data-aos-duration="500">
@@ -203,7 +197,7 @@
                                 <a href="#contact">Fahrt buchen</a>
                             </button>
                         </div>
-                        <div class="mobilePhoto"><img src="./images/gruppenfahrt.jpg" alt="Foto Gruppenfahrten"></div>
+                        <div class="mobilePhoto"><img src="./gruppenfahrt.jpg" alt="Foto Gruppenfahrten"></div>
                         <div class="mobileContentSection">
                             <h3 data-aos="fade-up" data-aos-duration="500">Gruppenfahrten</h3>
                             <p data-aos="fade-up" data-aos-duration="500">
@@ -230,7 +224,7 @@
                                 <a href="#contact">Fahrt buchen</a>
                             </button>
                         </div>
-                        <div class="mobilePhoto"><img src="./images/grillfahrt.jpg" alt="Foto Grillfahrten"></div>
+                        <div class="mobilePhoto"><img src="./grillfahrt.jpg" alt="Foto Grillfahrten"></div>
                         <div class="mobileContentSection">
                             <h3 data-aos="fade-up" data-aos-duration="500">Grillfahrten</h3>
                             <p data-aos="fade-up" data-aos-duration="500">
@@ -258,9 +252,9 @@
                         </div>
                     </div>
                     <div class="desktopPhotos">
-                        <div class="desktopPhoto"><img src="./images/sammelfahrt.jpg" alt="Foto Sammelfahrten"></div>
-                        <div class="desktopPhoto"><img src="./images/gruppenfahrt.jpg" alt="Foto Gruppenfahrten"></div>
-                        <div class="desktopPhoto"><img src="./images/grillfahrt.jpg" alt="Foto Grillfahrten"></div>
+                        <div class="desktopPhoto"><img src="./sammelfahrt.jpg" alt="Foto Sammelfahrten"></div>
+                        <div class="desktopPhoto"><img src="./gruppenfahrt.jpg" alt="Foto Gruppenfahrten"></div>
+                        <div class="desktopPhoto"><img src="./grillfahrt.jpg" alt="Foto Grillfahrten"></div>
                     </div>
 
                 </div>
@@ -563,42 +557,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const video = document.querySelector(".bg-video");
-            if (video) {
-                video.muted = true;
-                video.play();
-                video.loop = true;
-            }
-        });
-    </script>
-    <script>
-        function validatePrivacyCheckbox() {
-            const checkbox = document.getElementById('privacy');
-            checkbox.classList.remove('checkbox-error'); // ggf. vorher entfernen
-            if (!checkbox.checked) {
-                checkbox.classList.add('checkbox-error');
-                return false;
-            }
-            return true;
-        }
-    </script>
-    <script>
-        const faqItems = document.querySelectorAll('.faq-item');
-
-        faqItems.forEach(item => {
-            const button = item.querySelector('.faq-question');
-
-            button.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
-    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 
 </html>

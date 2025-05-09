@@ -1,3 +1,14 @@
+AOS.init();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".bg-video");
+  if (video) {
+    video.muted = true;
+    video.play();
+    video.loop = true;
+  }
+});
+
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -46,5 +57,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
+});
+
+
+function validatePrivacyCheckbox() {
+  const checkbox = document.getElementById('privacy');
+  checkbox.classList.remove('checkbox-error'); // ggf. vorher entfernen
+  if (!checkbox.checked) {
+    checkbox.classList.add('checkbox-error');
+    return false;
+  }
+  return true;
+}
+
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const button = item.querySelector('.faq-question');
+  button.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
 });
 
