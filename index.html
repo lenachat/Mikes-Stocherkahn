@@ -349,7 +349,11 @@
                         s24k24@gmail.com
                     </a>
                 </div>
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="17a3caf0-ebe1-45c8-b0c1-f3ec273b0516">
+                    <input type="hidden" name="from_name" value="Stocherkahn Webseite Kontaktformular">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <div class="grid-container-form">
                         <label for="name" data-aos="fade-up" data-aos-duration="500">Name:</label>
                         <input type="text" id="name" name="name" required data-aos="fade-up" data-aos-duration="500">
@@ -359,10 +363,22 @@
                             data-aos-delay="100">
                         <label for="message" data-aos="fade-up" data-aos-duration="500"
                             data-aos-delay="200">Nachricht:</label>
-                        <textarea id="message" name="message" required rows="8" placeholder="" data-aos="fade-up"
+                        <textarea id="message" name="message" required rows="5" placeholder="" data-aos="fade-up"
                             data-aos-duration="500" data-aos-delay="200"></textarea>
-                        <input class="submit-button" type="submit" value="Senden" data-aos="fade-up"
-                            data-aos-duration="500" data-aos-delay="300">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                            <label class="checkbox-label" for="privacy">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <p>
+                                    Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>
+                                    gelesen
+                                    und
+                                    akzeptiere sie.
+                                </p>
+                            </label>
+                            <div>
+                                <input class="submit-button" name="submit" type="submit" value="Senden">
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -522,7 +538,7 @@
                 <ul>
                     <li><a href="#home">Startseite</a></li>
                     <li><a href="#about">&Uuml;ber uns</a></li>
-                    <li><a href="#services">Fahrten</a></li>
+                    <li><a href="#tours">Fahrten</a></li>
                     <li><a href="#location">Anlegestellen</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -556,6 +572,17 @@
                 video.loop = true;
             }
         });
+    </script>
+    <script>
+        function validatePrivacyCheckbox() {
+            const checkbox = document.getElementById('privacy');
+            checkbox.classList.remove('checkbox-error'); // ggf. vorher entfernen
+            if (!checkbox.checked) {
+                checkbox.classList.add('checkbox-error');
+                return false;
+            }
+            return true;
+        }
     </script>
     <script>
         const faqItems = document.querySelectorAll('.faq-item');

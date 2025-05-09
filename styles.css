@@ -483,6 +483,45 @@ input:focus, textarea:focus {
     background-color: #FFE085;
 }
 
+.checkbox-label {
+    display: flex;
+    align-items: top;
+    gap: 0;
+    margin-top: 10px;
+    text-align: left;
+    color: #f7f5f4;
+    width: 80%;
+}
+
+.checkbox-label input[type="checkbox"] {
+width: 20px;
+height: 20px;
+}
+
+.checkbox-label p {
+margin: 0;
+padding-left: 10px;
+font-size: 0.9em;
+width: 100%;
+}
+
+.checkbox-label a {
+display: inline;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .checkbox-error {
+    animation: shake 0.3s ease;
+    outline: 2px solid red;
+  }
+
 /*-----------------------------------------------*/
 
 #faq {
