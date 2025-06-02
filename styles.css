@@ -653,7 +653,7 @@ footer a:hover {
         text-align: center;
         padding: 0;
         padding-top: 2em;
-        margin: 0;
+        margin: 0 20px;
     }
 
     .gallery {
@@ -727,9 +727,8 @@ footer a:hover {
         border-radius: 20px;    
     }
 
-    .grid-container-form {
-        width: 100%;
-        text-align: left;
+    form {
+        width: 60%; 
     }
 
     #location {
@@ -767,7 +766,7 @@ footer a:hover {
         padding: 2em 3em;
     }
 
-    #impressum {
+    #impressum, #datenschutz {
         padding: 5em 2em;
     }
 
@@ -776,7 +775,7 @@ footer a:hover {
     }
 
     .footer-bottom {
-        flex-direction: column;
+        display: block;
     }
 
     .footer-left, .footer ul {
@@ -786,9 +785,21 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2.6em;
+    }
+    h3 {
+        font-size: 2.4em;
+    }
     p, ul {
-        font-size: 1.8em;
+        font-size: 2.2em;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
     }
 
     .phone {
@@ -811,17 +822,76 @@ footer a:hover {
         font-size: 0.8em;
     }
 
-    #tours h2 {
-        text-align: center;
-        padding: 0;
-        padding-top: 2em;
-        margin: 0;
-    }
-
     .footer-left, .footer ul {
         flex-direction: column;
         gap: 0em;
     }
 
   }   
+
+  @media (max-width: 550px) {
+    h1 {
+        font-size: 2.7em;
+    }
+    h2 {
+        font-size: 2.4em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    p, ul {
+        font-size: 1.8em;
+    }
+    .portrait img {
+        margin: 0 10%;
+        width: 80%;
+    }
+     .mobilePhoto img {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+
+  }
+  
+
+@media (max-width: 470px) {
+
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    p, ul {
+        font-size: 1.3em;
+    }
+    .heading {
+        font-size: 2em;
+    }
+    .sub-heading {
+        font-size: 1.5em;
+    }
+    .phone {
+        width: 25px;
+        height: 25px;
+        transform: scale(1.5);
+    }
+    .footer {
+        gap: 2em;
+    }
+  }   
+
+  @media (max-width: 400px) {
+    .heading {
+        font-size: 1.5em;
+    }
+    .sub-heading {
+        font-size: 1.3em;
+    }
+  }
   
