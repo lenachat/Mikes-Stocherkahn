@@ -19,6 +19,13 @@
 
 <body>
     <header>
+        <div class="news-banner" id="newsBanner" onclick="openModal()">
+            <div class="scrolling-text">
+                <span>Das 18. T&uuml;binger Stocherkahnrennen findet am 19. Juni 2025 statt. Jetzt beste
+                    Zuschauerpl&auml;tze auf
+                    dem Neckar sichern!</span>
+            </div>
+        </div>
         <div class="header">
             <div class="header-contact-link">
                 <a href="tel:+491774157821"
@@ -35,6 +42,29 @@
             </div>
         </div>
     </header>
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="Stocherkahnrennen_v1.1.jpg" alt="Luftaufnahme vom Tübinger Stocherkahnrennen">
+                </div>
+                <div class="modal-text">
+                    <p><strong>Jetzt Platz auf dem Wasser sichern!</strong></p>
+                    <p>
+                        Erleben Sie das 18. T&uumlbinger Stocherkahnrennen live vom Kahn - direkt an der Rennstrecke!
+                        <br><br>
+                        Genie&szlig;en Sie 2 Stunden beste Sicht f&uuml;r nur 30 &euro; pro Person
+                        <br><br>
+                        Die Kost&uuml;mshow startet um 13:00 Uhr, das Rennen beginnt um 14:00 Uhr.
+                        <br><br>
+                        Die Pl&auml;tze sind begrenzt - jetzt reservieren!
+                    </p>
+                    <a href="#contact"><button class="modal-button closeModal">Jetzt Platz sichern</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div id="home">
@@ -154,7 +184,7 @@
                             <ul data-aos="fade-up" data-aos-duration="500">
                                 <li>Private Fahrt mit Grillen auf dem Neckar</li>
                                 <li>Wir stellen alles was man braucht - Grillgut, Grill, Besteck und Stimmung</li>
-                                <li>Pauschalpreis ab 160&euro; pro Gruppe</li>
+                                <li>Pauschalpreis ab 270&euro; pro Gruppe</li>
                             </ul>
                             <a href="#location" style="color:#f7f5f4" data-aos="fade-up" data-aos-duration="500">
                                 <p class="location">
@@ -364,8 +394,9 @@
                             data-aos-delay="100">Email:</label>
                         <input type="text" id="email" name="email" required data-aos="fade-up" data-aos-duration="500"
                             data-aos-delay="100">
-                        <label for="phone" data-aos="fade-up" data-aos-duration="500"
-                            data-aos-delay="200">Telefon: <p style="font-size: small; color: lightgrey">für Rückfragen oder kurzfristige (wetterbedingte) Änderungen</p> </label>
+                        <label for="phone" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Telefon: <p
+                                style="font-size: small; color: lightgrey">für Rückfragen oder kurzfristige
+                                (wetterbedingte) Änderungen</p> </label>
                         <input type="text" id="phone" name="phone" data-aos="fade-up" data-aos-duration="500"
                             data-aos-delay="200">
                         <label for="message" data-aos="fade-up" data-aos-duration="500"
