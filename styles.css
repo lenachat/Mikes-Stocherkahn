@@ -779,6 +779,10 @@ footer a:hover {
         padding: 0;
     }
 
+    #city-tour {
+        padding: 3em 2em;
+    }
+
     .phone {
         width: 38px;
         height: 38px;
