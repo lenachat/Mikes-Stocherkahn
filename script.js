@@ -9,43 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const modal = document.getElementById("modal");
-const closeModal = document.getElementById("closeModal");
-const banner = document.getElementById("newsBanner");
-
-// Show modal once on load
-window.addEventListener("DOMContentLoaded", () => {
-  modal.style.display = "block";
-});
-
-// Close modal on click of X
-closeModal.onclick = () => {
-  modal.style.display = "none";
-};
-
-// Clicking on banner opens modal again
-banner.onclick = () => {
-  modal.style.display = "block";
-};
-
-// Close modal if clicked outside
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
-// Select all elements with class "closeModal"
-const closeButtons = document.querySelectorAll(".closeModal");
-
-closeButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    // Close the modal
-    modal.style.display = "none";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
   // ----- Fahrten Section Animation -----
